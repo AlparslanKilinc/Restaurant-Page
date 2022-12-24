@@ -1,16 +1,50 @@
 import './style.css';
-import printMe from './home';
+import {home} from './home';
+import {contact} from './contact';
+import {menu} from './menu';
 
- function component() {
-  const element = document.createElement('div');
-  const btn = document.createElement('button');
-  element.innerHTML = 'Alparslan Kilinc';
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
+/// Global Variable 
+let page = home();
 
-  element.appendChild(btn);
-  element.classList.add('hello');
-  return element;
- }
+const header = ((page)=>{
+    let header = document.createElement('div');
 
- document.body.appendChild(component());
+    let homeButton = document.createElement('button');
+    let menuButton = document.createElement('button');
+    let contactButton = document.createElement('button');
+
+    homeButton.innerHTML="HOME";
+    menuButton.innerHTML="MENU";
+    contactButton.innerHTML="CONTACT";
+
+    homeButton.addEventListener('click',()=>{
+        page=home();
+        render(header,page);
+    });
+    menuButton.addEventListener('click',()=>{
+        page=menu();
+        render(header,page);
+    });
+    contactButton.addEventListener('click',()=>{
+        page=contact();
+        render(header,page);
+    });
+
+    header.appendChild(homeButton);
+    header.appendChild(menuButton);
+    header.appendChild(contactButton);
+    return header;
+})(page);
+
+const render = ((header,page)=>{
+    document.body.innerHTML="";
+    let body = document.createElement('div');
+    /// Add the Header and the current Page to the Body
+    body.appendChild(header);
+    body.appendChild(page);
+    document.body.appendChild(body);
+});
+render(header,page);
+
+
+

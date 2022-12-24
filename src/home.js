@@ -1,3 +1,9 @@
-export default function printMe() {
-    console.log('I get called from print.js!');
-}
+
+const home = (()=>{
+    let home = document.createElement('div');
+    home.innerHTML="HOME";
+
+    return home;
+})
+
+export {home};
