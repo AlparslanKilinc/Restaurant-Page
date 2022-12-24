@@ -1,15 +1,8 @@
 @font-face {
-    font-family: Assistant-Regular;
-    src: url(../Assistant-Font/Assistant-Regular.ttf);
+    font-family: GFS_Didot;
+    src: url(../GFS_Didot/GFSDidot-Regular.ttf);
 }
-@font-face {
-    font-family: Assistant-Bold;
-    src: url(../Assistant-Font/Assistant-Bold.ttf);
-}
-@font-face {
-    font-family: Assistant-Light;
-    src: url(../Assistant-Font/Assistant-Light.ttf);
-}
+
 
 * {
     box-sizing: border-box;
@@ -18,9 +11,7 @@
     margin: 0;
   }
   :root{
-    --font-Regular: Assistant-Regular;
-    --font-Bold: Assistant-Bold;
-    --font-Light: Assistant-Light;
+    --font-Regular: GFS_Didot;
     --black: #191414;
     --green:#1DB954;
     --gray: #f3f4f6;
@@ -35,39 +26,40 @@ html,body{
 }
 @media (min-width: 200px){
     body{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 7fr;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 1fr;
     }
-    #header{
-        grid-row: 1;
-    }
-    #content{
-        grid-row: 2;
+    .header{
+        grid-column:1;
     }
 }
 
 body{
     display: grid;
+    font-family: var(--font-Regular);
 }
 /* Header */ 
-#header{
+.header{
     display: flex;
-    font-size: var(--font-Bold);
-    font-size: 19px;
-    justify-content:space-around;
+    flex-direction: column;
+    flex: 1;
+    font-family: var(--font-Regular);
+    font-weight: bold;
     align-items: center;
-    background: rgb(249,231,254);
-    background: radial-gradient(circle, rgba(249,231,254,1) 0%, 
-    rgba(218,252,252,1) 100%);
-    color: var(--color-black)
+    padding: 0.5rem;
+
+    background-color: #e5e5f7;
+    opacity: 0.75;
+    background-size: 20px 20px;
+    background-image:  repeating-linear-gradient(0deg, #191414, #191414 1px, #e5e5f7 1px, #e5e5f7);
 }
  /* Content */
- #main{
+ .page{
     display: flex;
     flex: 1;
+    font-family: var(--font-Regular);
     flex-direction: column;
     justify-content: center;
-    background-color: var(--gray);
  }
  
 
@@ -76,6 +68,7 @@ body{
  
 /* All Buttons */ 
 button{
+   font-family: var(--font-Regular);
    margin-top: 1rem;
    font-size: large;
    width: 100px;

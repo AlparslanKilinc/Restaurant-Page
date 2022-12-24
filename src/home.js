@@ -1,7 +1,9 @@
+import './style.css';
 
 const home = (()=>{
     let home = document.createElement('div');
-    home.innerHTML="HOME";
+    home.className='page';
+    home.innerHTML="Hello";
 
     return home;
 })
