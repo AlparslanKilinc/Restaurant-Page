@@ -23,25 +23,22 @@ html,body{
     min-height: 100%;
     margin: 0;
     font-family: var(--font-Regular);
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
 }
-@media (min-width: 200px){
-    body{
-        grid-template-columns: 1fr 5fr;
-        grid-template-rows: 1fr;
-    }
-    .header{
-        grid-column:1;
-    }
-}
+
 
 body{
     display: grid;
     font-family: var(--font-Regular);
 }
 /* Header */ 
+.name{
+    font-size: 52px;
+}
 .header{
     display: flex;
-    max-height: 100vh;
+    max-height: 100%;
     flex-direction: column;
     gap: 0.6rem;
     font-family: var(--font-Regular);
@@ -60,7 +57,7 @@ body{
     overflow-x: hidden;
     padding: 0.4rem;
     gap: 0.2rem;
-    height: 100vh
+    min-height: 100vh;
  }
  .menuDiv{
     display: flex;
@@ -73,7 +70,6 @@ body{
     box-shadow: 3px 4px var(--black);
     margin: 1rem;
     font-family: var(--font-Regular);
-    
  }
 
  h3:hover{
@@ -85,6 +81,12 @@ body{
     height: 100%;
     object-fit: cover;
  }
+ .icon{
+    max-width:48px;
+    max-height:42px;
+    object-Fit:cover;
+ }
+
 
 
  
@@ -106,4 +108,32 @@ button:hover{
 }
 button:focus{
     background-color: transparent;
+}
+
+@media (max-width: 600px){
+    .name{
+        font-size: large;
+        margin-bottom: 2rem;
+    }
+    .header{
+      gap: 0;
+      justify-content: space-around;
+      font-size: x-small;
+      max-height: 100%;
+    }
+    .icon{
+        max-width: 24px;
+        max-height: 22px;
+    }
+    .home{
+        font-size: x-small;
+    }
+    .menuDiv{
+        font-size: xx-small;
+        gap: 0.5rem;
+    }
+    button{
+        width: 100%;
+        font-size: x-small;
+    }
 }

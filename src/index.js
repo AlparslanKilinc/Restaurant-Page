@@ -23,8 +23,8 @@ const header = (()=>{
     header.className="header";
 
     let Name = document.createElement('h1');
+    Name.className='name';
     Name.textContent="Alpey's";
-    Name.style.fontSize='52px';
 
     let address = document.createElement('p');
     address.textContent="345 Midland St,";

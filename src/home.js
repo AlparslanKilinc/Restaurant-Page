@@ -95,9 +95,7 @@ const home = (()=>{
     
     let iconSVG= document.createElement('img');
     iconSVG.src=icon;
-    iconSVG.style.maxWidth='48px';
-    iconSVG.style.maxHeight='42px';
-    iconSVG.style.objectFit='cover';
+    iconSVG.className='icon';
 
     let para = document.createElement('p');
     para.textContent="Whether you're searching for something new to warm your mug, seeking the best brew method for your favorite blend or exploring our rarest offerings, you’ve come to the right place.";
