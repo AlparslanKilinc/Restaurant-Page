@@ -6,7 +6,19 @@ import {menu} from './menu';
 /// Global Variable 
 let page = home();
 
-const header = ((page)=>{
+const ButtonFactory = (name)=>{
+    let Button = document.createElement('button');
+    Button.textContent=name;
+    Button.addEventListener('click',()=>{
+        if(name==="CONTACT")page=contact();
+        else if(name==="MENU")page=menu();
+        else page=home();
+        render(header,page);
+    });
+    return Button;
+}
+
+const header = (()=>{
     let header = document.createElement('div');
     header.className="header";
 
@@ -47,32 +59,16 @@ const header = ((page)=>{
 
     
 
-    let homeButton = document.createElement('button');
-    let menuButton = document.createElement('button');
-    let contactButton = document.createElement('button');
+    let menuButton = ButtonFactory("MENU");
+    let contactButton = ButtonFactory("CONTACT");
+    let homeButton = ButtonFactory("HOME");
 
-    homeButton.textContent="HOME";
-    menuButton.textContent="MENU'S";
-    contactButton.textContent="CONTACT";
-
-    homeButton.addEventListener('click',()=>{
-        page=home();
-        render(header,page);
-    });
-    menuButton.addEventListener('click',()=>{
-        page=menu();
-        render(header,page);
-    });
-    contactButton.addEventListener('click',()=>{
-        page=contact();
-        render(header,page);
-    });
+   
     header.appendChild(Name);
     header.appendChild(address);
     header.appendChild(address2);
     header.appendChild(phone);
     header.appendChild(homeButton);
-    
     header.appendChild(giftCards);
     header.appendChild(ourStory);
     header.appendChild(Hours);
@@ -83,17 +79,18 @@ const header = ((page)=>{
     header.appendChild(email);
     header.appendChild(contactButton);
     
-
-    
     return header;
-})(page);
+})();
 
 const render = ((header,page)=>{
     document.body.innerHTML="";
     document.body.appendChild(header);
     document.body.appendChild(page);
 });
+
 render(header,page);
+
+
 
 
 
