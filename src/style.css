@@ -55,6 +55,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
  /* Content */
@@ -115,7 +116,8 @@ button:focus{
     background-color: transparent;
 }
 
-@media (min-width: 50em){
+
+@media (min-width: 55em){
 body{
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -134,7 +136,15 @@ body{
     gap: 1.5em;
     padding: 1rem;
     margin: 1rem;
-    
+}
+.header{
+    gap: 2rem;
+}
+.divider{
+    display: flex;
+    font-size: 18px;
+    gap: 2rem;
+    flex: 1;
 }
 
 }
@@ -142,11 +152,15 @@ body{
 
 @media (max-width: 49em){
     h1{
-        font-size: 18px;
+        font-size: 22px;
+    }
+    .box>p{
+        font-size: 14px;
+        
     }
     .box{
-        font-size: 12px;
-        font-weight: lighter;
+        gap: 0.2rem;
+       
     }
     html{
         font-size: 16px;
