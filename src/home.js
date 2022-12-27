@@ -41,7 +41,7 @@ const home = (()=>{
     lattePic.src=latte;
     /// style 
     lattePic.style.gridColumn='3';
-    lattePic.style.gridRow='1/4';
+    lattePic.style.gridRow='2/5';
 
 
     let coffeePic = document.createElement('img');
@@ -91,7 +91,7 @@ const home = (()=>{
     /// Menu 
     let menuDiv = document.createElement('div');
     menuDiv.style.gridColumn='3/4';
-    menuDiv.style.gridRow='4';
+    menuDiv.style.gridRow='1/2';
     menuDiv.className='menuDiv';
     
     let para = document.createElement('p');

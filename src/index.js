@@ -1,7 +1,7 @@
 import './style.css';
 import './reset.css'
 import {home} from './home';
-import {contact} from './contact';
+import {about} from './about';
 import {menu} from './menu';
 
 /// Global Variable 
@@ -11,7 +11,7 @@ const ButtonFactory = (name)=>{
     let Button = document.createElement('button');
     Button.textContent=name;
     Button.addEventListener('click',()=>{
-        if(name==="CONTACT")page=contact();
+        if(name==="ABOUT")page=about();
         else if(name==="MENU")page=menu();
         else page=home();
         render(header,page);
@@ -68,7 +68,7 @@ const header = (()=>{
     
 
     let menuButton = ButtonFactory("MENU");
-    let contactButton = ButtonFactory("CONTACT");
+    let aboutButton = ButtonFactory("ABOUT");
     let homeButton = ButtonFactory("HOME");
 
     box.appendChild(Name);
@@ -85,7 +85,7 @@ const header = (()=>{
     divider.appendChild(join);
     divider.appendChild(reserve);
     divider.appendChild(email);
-    divider.appendChild(contactButton);
+    divider.appendChild(aboutButton);
 
     header.appendChild(box);
     header.appendChild(divider);
