@@ -1,4 +1,5 @@
 import './style.css';
+import './reset.css';
 import beans from './Food/beans.jpg';
 import americano from './Food/americano.jpg';
 import espresso from './Food/espresso.jpg';
@@ -53,7 +54,7 @@ const home = (()=>{
     cupPic.src=cup;
     /// style 
     cupPic.style.gridColumn='4';
-    cupPic.style.gridRow='2/4';
+    cupPic.style.gridRow='2/5';
 
 
 
@@ -69,15 +70,15 @@ const home = (()=>{
     let mochaPic = document.createElement('img');
     mochaPic.src=mocha;
     /// style 
-    mochaPic.style.gridColumn='2';
-    mochaPic.style.gridRow='2/4';
+    mochaPic.style.gridColumn='2/3';
+    mochaPic.style.gridRow='4/5';
 
 
     
     let teaPic = document.createElement('img');
     teaPic.src=tea;
     /// style 
-    teaPic.style.gridColumn='1';
+    teaPic.style.gridColumn='1/3';
     teaPic.style.gridRow='2/4';
 
     let espressoPic = document.createElement('img');
@@ -89,18 +90,13 @@ const home = (()=>{
 
     /// Menu 
     let menuDiv = document.createElement('div');
-    menuDiv.style.gridColumn='2/5';
-    menuDiv.style.gridRow='4/5';
+    menuDiv.style.gridColumn='3/4';
+    menuDiv.style.gridRow='4';
     menuDiv.className='menuDiv';
     
-    let iconSVG= document.createElement('img');
-    iconSVG.src=icon;
-    iconSVG.className='icon';
-
     let para = document.createElement('p');
     para.textContent="Whether you're searching for something new to warm your mug, seeking the best brew method for your favorite blend or exploring our rarest offerings, you’ve come to the right place.";
-
-    menuDiv.appendChild(iconSVG);
+    para.style.fontSize='100%';
     menuDiv.appendChild(para);
 
 

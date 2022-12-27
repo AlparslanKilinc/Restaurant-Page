@@ -1,4 +1,5 @@
 import './style.css';
+import './reset.css'
 import {home} from './home';
 import {contact} from './contact';
 import {menu} from './menu';
@@ -26,9 +27,13 @@ const header = (()=>{
     Name.className='name';
     Name.textContent="Alpey's";
 
+    let box = document.createElement('div');
+    box.className='box';
+
     let address = document.createElement('p');
     address.textContent="345 Midland St,";
     address.style.fontStyle='italic';
+    
     let address2 = document.createElement('p');
     address2.textContent="NEW YORK, NY 10019";
     address2.style.fontStyle='italic';
@@ -36,25 +41,28 @@ const header = (()=>{
     phone.textContent="631-943-9856";
     phone.style.fontStyle='italic';
 
-    let giftCards = document.createElement('h3');
+    let divider = document.createElement('div');
+    divider.className='divider';
+
+    let giftCards = document.createElement('p');
     giftCards.textContent="GIFTS CARDS";
 
-    let ourStory = document.createElement('h3');
+    let ourStory = document.createElement('p');
     ourStory.textContent="OUR STORY";
 
-    let Hours = document.createElement('h3');
+    let Hours = document.createElement('p');
     Hours.textContent="HOURS & LOCATION ";
 
-    let community = document.createElement('h3');
+    let community = document.createElement('p');
     community.textContent="COMMUNITY";
 
-    let join = document.createElement('h3');
+    let join = document.createElement('p');
     join.textContent="JOIN OUR TEAM";
 
-    let reserve = document.createElement('h3');
+    let reserve = document.createElement('p');
     reserve.textContent="RESERVE";
 
-    let email = document.createElement('h3');
+    let email = document.createElement('p');
     email.textContent="EMAIL SIGNUP";
 
     
@@ -63,22 +71,25 @@ const header = (()=>{
     let contactButton = ButtonFactory("CONTACT");
     let homeButton = ButtonFactory("HOME");
 
+    box.appendChild(Name);
+    box.appendChild(address);
+    box.appendChild(address2);
+    box.appendChild(phone);
    
-    header.appendChild(Name);
-    header.appendChild(address);
-    header.appendChild(address2);
-    header.appendChild(phone);
-    header.appendChild(homeButton);
-    header.appendChild(giftCards);
-    header.appendChild(ourStory);
-    header.appendChild(Hours);
-    header.appendChild(menuButton);
-    header.appendChild(community);
-    header.appendChild(join);
-    header.appendChild(reserve);
-    header.appendChild(email);
-    header.appendChild(contactButton);
-    
+    divider.appendChild(homeButton);
+    divider.appendChild(giftCards);
+    divider.appendChild(ourStory);
+    divider.appendChild(Hours);
+    divider.appendChild(menuButton);
+    divider.appendChild(community);
+    divider.appendChild(join);
+    divider.appendChild(reserve);
+    divider.appendChild(email);
+    divider.appendChild(contactButton);
+
+    header.appendChild(box);
+    header.appendChild(divider);
+   
     return header;
 })();
 
