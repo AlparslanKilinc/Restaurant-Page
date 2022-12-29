@@ -100,18 +100,19 @@ const home = (()=>{
     menuDiv.appendChild(para);
 
 
-
+   
     home.appendChild(bean);
     home.appendChild(cups);
+    home.appendChild(menuDiv);
     home.appendChild(teaPic);
     home.appendChild(cupPic);
+    home.appendChild(mochaPic);
     home.appendChild(coffeePic);
     home.appendChild(machinePic);
     home.appendChild(lattePic);
     home.appendChild(americanoPic);
-    home.appendChild(mochaPic);
     home.appendChild(espressoPic);
-    home.appendChild(menuDiv);
+   
 
     return home;
 });
