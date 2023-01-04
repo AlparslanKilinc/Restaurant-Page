@@ -96,7 +96,7 @@ body{
  .menu{
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
     padding: 1rem;
  }
 
@@ -192,6 +192,12 @@ body{
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
 }
+.menu{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    padding: 1rem;
+ }
 .about>img{
     width: 50%;
     height: 50%;
