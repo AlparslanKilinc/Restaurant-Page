@@ -44,25 +44,25 @@ const header = (()=>{
     let divider = document.createElement('div');
     divider.className='divider';
 
-    let giftCards = document.createElement('p');
+    let giftCards = document.createElement('button');
     giftCards.textContent="GIFTS CARDS";
 
-    let ourStory = document.createElement('p');
+    let ourStory = document.createElement('button');
     ourStory.textContent="OUR STORY";
 
-    let Hours = document.createElement('p');
+    let Hours = document.createElement('button');
     Hours.textContent="HOURS & LOCATION ";
 
-    let community = document.createElement('p');
+    let community = document.createElement('button');
     community.textContent="COMMUNITY";
 
-    let join = document.createElement('p');
+    let join = document.createElement('button');
     join.textContent="JOIN OUR TEAM";
 
-    let reserve = document.createElement('p');
+    let reserve = document.createElement('button');
     reserve.textContent="RESERVE";
 
-    let email = document.createElement('p');
+    let email = document.createElement('button');
     email.textContent="EMAIL SIGNUP";
 
     

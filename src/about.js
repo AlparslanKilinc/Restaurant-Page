@@ -15,17 +15,15 @@ const about = (()=>{
 
     let shopPic = document.createElement('img');
     shopPic.src=shop;
-    shopPic.style.width='50%';
-    shopPic.style.height='50%';
 
     let text = document.createElement('p');
     text.style.padding='1rem';
     text.style.fontSize='18px';
     text.textContent="It takes many hands to craft the perfect cup of coffee"+ 
-    "from the farmers who tend to the red-ripe coffee cherries, to the master"+ 
-    "roasters who coax the best from every bean, and to the barista who serves"+
-    "it with care. We are committed to the highest standards of quality and"+
-    "service, embracing our heritage while innovating to create new experiences to savor.";
+    " from the farmers who tend to the red-ripe coffee cherries, to the master"+ 
+    " roasters who coax the best from every bean, and to the barista who serves"+
+    " it with care. We are committed to the highest standards of quality and"+
+    " service, embracing our heritage while innovating to create new experiences to savor.";
 
     let learn = document.createElement('button');
     learn.textContent='Learn More';

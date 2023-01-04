@@ -20,6 +20,11 @@
 html,body{
     max-height: 100vh;
     font-family: var(--font-Regular);
+    /* font grows 1px for every 100px of viewport width */
+    font-size: calc(16px + 0.4vw);
+    /* leading grows along with font, */
+    /* with an additional 0.1em + 0.5px per 100px of the viewport */
+    line-height: calc(0.8em + 0.5vw);  
 }
 
 
@@ -31,40 +36,37 @@ body{
 
 .header{
     display: flex;
-    position: sticky;
     flex-direction: column;
     font-family: var(--font-Regular);
     font-weight: bold;
-    gap: 2em;
-    padding: 0.5em;
+    padding: 0.7em;
+    gap: 1rem;
     background-color: var(--green);
-    color: var(--black);
+    color: whitesmoke;
 }
 
 .box{
     display: flex;
     flex-direction: column;
-    font-size: 14px;
-  
+    font-size:16px;
 }
 .name{
     margin-left: 0.5rem;
     margin-bottom: 1rem;
+    font-size: calc(1.2em + 2vw);
 }
+@media (min-width: 50em) {
+    h1 {
+      font-size: 30px;
+    }
+}
+
 .divider{
     display: flex;
-    font-size: 18px;
     flex-direction: column;
 }
 
 
-
-
-.about-box{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
 
 
  /* Content */
@@ -94,21 +96,21 @@ body{
  .menu{
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
     padding: 1rem;
  }
 
  .menuItem{
     background-color: var(--green);
     padding: 1rem;
+    margin-right: 1.5rem;
     border: var(--green) 4px solid;
     box-shadow: 15px 15px 0 -4px white,
     15px 15px var(--green);
  }
 
  .learn{
-    width: 200px;
-    font-size: 16px;
+    max-width: 200px;
     font-weight: bold;
     color: var(--black);
     border: transparent;
@@ -139,14 +141,6 @@ body{
     box-shadow: 3px 4px var(--black);
     font-family: var(--font-Regular);
  }
- .divider>p{
-    margin-left: 0.5rem;
- }
-
- .divider>p:hover{
-    cursor:pointer;
-    box-shadow: 3px 4px white;
- }
 
  h3{
     margin: 0;
@@ -162,16 +156,20 @@ body{
     max-height:42px;
     object-Fit:cover;
  }
+ .about-box{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 /* All Buttons */ 
 button{
    font-family: var(--font-Regular);
-   border-radius:2px;
    border: transparent;
    background-color: transparent;
    font-weight: bold;
    text-align: left;
-   color: white;
+   color: whitesmoke;
 }
 
 button:hover{
@@ -194,25 +192,10 @@ body{
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
 }
-.menuDiv{
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    font-size: larger;
-    gap: 1.5em;
-    padding: 1rem;
-    margin: 1rem;
+.about>img{
+    width: 50%;
+    height: 50%;
 }
-.header{
-    gap: 2rem;
-}
-.divider{
-    display: flex;
-    font-size: 18px;
-    gap: 2rem;
-    flex: 1;
-}
-
 }
 
 
