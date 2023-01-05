@@ -21,11 +21,6 @@ html,body{
     height: 100vh;
     height: calc(100vh - var(--vh-offset, 0px));
     font-family: var(--font-Regular);
-    /* font grows 1px for every 100px of viewport width */
-    font-size: calc(16px + 0.4vw);
-    /* leading grows along with font, */
-    /* with an additional 0.1em + 0.5px per 100px of the viewport */
-    line-height: calc(0.8em + 0.5vw);  
 }
 
 
@@ -84,10 +79,11 @@ body{
     font-family: var(--font-Regular);
     background-color: #f0ecead8;
     color: var(--black);
+    flex: 1;
+    max-height: 100vh;
  }
  .menu{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
  }
 
  .menuItem{
@@ -164,7 +160,6 @@ button:focus{
         
     }
     .name{
-
         font-size: 25px;
         margin-bottom: 1rem;
     }
