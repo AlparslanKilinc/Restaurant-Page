@@ -18,7 +18,6 @@ const about = (()=>{
 
     let text = document.createElement('p');
     text.style.padding='1rem';
-    text.style.fontSize='18px';
     text.textContent="It takes many hands to craft the perfect cup of coffee"+ 
     " from the farmers who tend to the red-ripe coffee cherries, to the master"+ 
     " roasters who coax the best from every bean, and to the barista who serves"+
