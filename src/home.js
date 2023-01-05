@@ -10,8 +10,6 @@ import coffee from './Food/coffee.jpg';
 import cup from './Food/cup.jpg';
 import machine from './Food/machine.jpg';
 import twoCups from './Food/2cups.jpg';
-import icon from './Food/icon.svg';
-
 
 
 const home = (()=>{
@@ -22,7 +20,7 @@ const home = (()=>{
     bean.src=beans;
     /// style 
     bean.style.gridColumn='1';
-    bean.style.gridRow='1/2';
+    bean.style.gridRow='1/3';
 
     let cups = document.createElement('img');
     cups.src=twoCups;
@@ -34,7 +32,7 @@ const home = (()=>{
     americanoPic.src=americano;
     /// style 
     americanoPic.style.gridColumn='2';
-    americanoPic.style.gridRow='1/2';
+    americanoPic.style.gridRow='2/3';
 
 
     let lattePic = document.createElement('img');
@@ -78,8 +76,8 @@ const home = (()=>{
     let teaPic = document.createElement('img');
     teaPic.src=tea;
     /// style 
-    teaPic.style.gridColumn='1/3';
-    teaPic.style.gridRow='2/4';
+    teaPic.style.gridColumn='2/4';
+    teaPic.style.gridRow='1/2';
 
     let espressoPic = document.createElement('img');
     espressoPic.src=espresso;
@@ -88,22 +86,14 @@ const home = (()=>{
     espressoPic.style.gridRow='4/5';
 
 
-    /// Menu 
-    let menuDiv = document.createElement('div');
-    menuDiv.style.gridColumn='3/4';
-    menuDiv.style.gridRow='1/2';
-    menuDiv.className='menuDiv';
+  
+
     
-    let para = document.createElement('p');
-    para.textContent="Whether you're searching for something new to warm your mug, seeking the best brew method for your favorite blend or exploring our rarest offerings, you’ve come to the right place.";
-    para.style.fontSize='100%';
-    menuDiv.appendChild(para);
 
 
    
     home.appendChild(bean);
     home.appendChild(cups);
-    home.appendChild(menuDiv);
     home.appendChild(teaPic);
     home.appendChild(cupPic);
     home.appendChild(mochaPic);

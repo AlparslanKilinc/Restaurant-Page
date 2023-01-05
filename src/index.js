@@ -4,6 +4,7 @@ import {home} from './home';
 import {about} from './about';
 import {menu} from './menu';
 
+
 /// Global Variable 
 let page = home();
 
@@ -22,6 +23,7 @@ const ButtonFactory = (name)=>{
 const header = (()=>{
     let header = document.createElement('div');
     header.className="header";
+
 
     let Name = document.createElement('h1');
     Name.className='name';
