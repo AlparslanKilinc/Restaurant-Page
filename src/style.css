@@ -178,13 +178,10 @@ button:focus{
         padding: 0.2rem;
         gap: 0.2rem;
     }
-    .menuDiv{
-        margin-bottom: 1rem;
-        padding: 1rem;
-     }
+
     /* Menu Page */ 
     .menuPage{
-        padding: 0.5rem;
+        padding: 1rem;
         gap: 1rem;
     }
     .menu{
@@ -192,7 +189,6 @@ button:focus{
         gap: 2rem;
         grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
         padding: 1rem;
-        margin: 0;
         font-size: 12px;
      }
       /* About Page */ 
