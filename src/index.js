@@ -5,6 +5,15 @@ import {about} from './about';
 import {menu} from './menu';
 
 
+/// App Height Fix For IOS and other devices 
+const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+}
+   window.addEventListener('resize', appHeight)
+   appHeight()
+
+
 /// Global Variable 
 let page = home();
 

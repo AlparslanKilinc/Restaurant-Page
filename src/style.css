@@ -16,9 +16,11 @@
     --gray: #DDBEA9;
     --lightgray:#FFE8D6;
     --brown: #CB997E;
+    --app-height:100%;
 }
 html,body{
     height: 100vh;
+    height: var(--app-height);
     font-family: var(--font-Regular);
 }
 
@@ -35,7 +37,7 @@ body{
     position: sticky;
     top: 0px;
     flex: 1;
-    max-height:100vh;
+    max-height:var(--app-height);
     font-family: var(--font-Regular);
     font-weight: bold;
     background-color: var(--green);
@@ -78,7 +80,7 @@ body{
     font-family: var(--font-Regular);
     background-color: #f0ecead8;
     color: var(--black);
-    max-height: 100vh;
+    max-height:var(--app-height);
  }
  .menu{
     display: grid;
