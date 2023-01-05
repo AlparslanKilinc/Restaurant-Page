@@ -142,13 +142,17 @@ button{
 }
 
 button:hover{
-   box-shadow: 3px 4px white;
    cursor:pointer;
 }
 button:focus{
     background-color: transparent;
 }
 
+@media (hover: hover){
+    button:hover{
+        box-shadow: 3px 4px white;
+    }
+}
 /* Mobile */
 @media screen and (min-width: 320px) {
     /* Sidebar */
