@@ -19,7 +19,6 @@
 }
 html,body{
     height: 100vh;
-    height: calc(100vh - var(--vh-offset, 0px));
     font-family: var(--font-Regular);
 }
 
@@ -35,7 +34,8 @@ body{
     flex-direction: column;
     position: sticky;
     top: 0px;
-    max-height: 100vh;
+    flex: 1;
+    max-height:100vh;
     font-family: var(--font-Regular);
     font-weight: bold;
     background-color: var(--green);
@@ -51,7 +51,6 @@ body{
 .name{
     color: #191414;
     align-self: center;
-    font-size: calc(1.2em + 2vw);
 }
 
 .divider{
@@ -160,7 +159,6 @@ button:focus{
         font-size: 14px;
         padding: 0.5em;
         gap: 1rem;
-        
     }
     .name{
         font-size: 25px;
@@ -168,10 +166,8 @@ button:focus{
     }
 
     .box{
-        align-self: center;
         font-weight: 100;
         font-size: 12px;
-        line-height: normal;
     }
     .divider{
         gap: 1rem;
