@@ -79,7 +79,6 @@ body{
     font-family: var(--font-Regular);
     background-color: #f0ecead8;
     color: var(--black);
-    flex: 1;
     max-height: 100vh;
  }
  .menu{
