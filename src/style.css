@@ -96,6 +96,7 @@ body{
     box-shadow: 10px 10px 0 -4px white,
     10px 10px var(--green);
     padding: 1rem;
+    border-radius: 4px;
  }
 
  .learn{
@@ -276,11 +277,22 @@ button:focus{
         grid-template-columns: 1fr 5fr;
         grid-template-rows: 1fr;
     }
+     /* Sidebar */
+    .header{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 50px;
+    }
+    .box{
+        font-size: 18px
+    }
     .home{
         display: grid;
         grid-template-columns: repeat(4,1fr);
         gap: 10px;
     }
+
     .menu{
         display: grid;
         gap: 2rem;
